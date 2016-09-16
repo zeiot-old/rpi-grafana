@@ -42,11 +42,14 @@ build:
 .PHONY: run
 run:
 	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	@$(DOCKER) run --rm=true -p 9090:3000 $(NAMESPACE)/$(IMAGE):$(VERSION)
+	$(DOCKER) run --rm=true -p 9090:3000 \
+		-v `pwd`/$(version):/etc/grafana \
+		-v `pwd`/data:/data \
+		$(NAMESPACE)/$(IMAGE):$(VERSION)
 
 .PHONY: login
 login:
-	@$(DOCKER) login https://index.docker.io/v1/
+	@$(DOCKER) login
 
 .PHONY: publish
 publish:
