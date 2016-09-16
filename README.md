@@ -39,4 +39,4 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 
 [Raspberry PI]: https://www.raspberrypi.org/
-[Prometheus]: https://prometheus.io/
+[Grafana]: https://grafana.org/
