@@ -19,6 +19,6 @@ RUN tar -xf /grafana.tar.gz \
 
 EXPOSE 3000
 
-VOLUME ["/data", "/etc/grafana"]
+VOLUME ["/var/lib/grafana", "/etc/grafana"]
 
 CMD /grafana/bin/grafana-server --homepath=/grafana --config=/etc/grafana/grafana.ini
