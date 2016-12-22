@@ -20,8 +20,9 @@ Or build :
 
 # Supported tags
 
-* [![](https://images.microbadger.com/badges/version/zeiot/rpi-grafana.svg)](http://microbadger.com/images/zeiot/rpi-grafana "Get your own version badge on microbadger.com")
-
+* [![](https://images.microbadger.com/badges/image/zeiot/rpi-grafana:4.0.2.svg)](https://microbadger.com/images/zeiot/rpi-grafana:4.0.2 "Get your own image badge on microbadger.com")
+* [![](https://images.microbadger.com/badges/image/zeiot/rpi-grafana:3.1.1.svg)](https://microbadger.com/images/zeiot/rpi-grafana:3.1.1 "Get your own image badge on microbadger.com")
+* [![](https://images.microbadger.com/badges/image/zeiot/rpi-grafana:3.0.4.svg)](https://microbadger.com/images/zeiot/rpi-grafana:3.0.4 "Get your own image badge on microbadger.com")
 
 ## License
 
