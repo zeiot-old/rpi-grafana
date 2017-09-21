@@ -3,6 +3,10 @@ RPI Grafana ChangeLog
 
 # Version 0.3.0 (09/21/2017)
 
+- Add Grafana 4.4.x
+
+# Version 0.3.0 (09/21/2017)
+
 - Migrate to Gitlab
 - Add Grafana 4.3.x
 
