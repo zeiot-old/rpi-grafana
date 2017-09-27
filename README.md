@@ -1,7 +1,6 @@
 # RPI Grafana
 
-* Master : [![Circle CI](https://circleci.com/gh/zeiot/rpi-grafana/tree/master.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-grafana/tree/master)
-* Develop : [![Circle CI](https://circleci.com/gh/zeiot/rpi-grafana/tree/develop.svg?style=svg)](https://circleci.com/gh/zeiot/rpi-grafana/tree/develop)
+* Master: [![pipeline status](https://gitlab.com/zeiot/rpi-grafana/badges/master/pipeline.svg)](https://gitlab.com/zeiot/rpi-grafana/commits/master)
 
 Docker image of [Grafana][] to use on a [Raspberry PI][].
 
