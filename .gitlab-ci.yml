@@ -4,6 +4,7 @@ services:
 
 variables:
   DOCKER_DRIVER: overlay
+  GRAFANA_VERSION: 4.4
 
 before_script:
   - docker login -u gitlab-ci-token -p "$CI_BUILD_TOKEN" "$CI_REGISTRY"
@@ -11,7 +12,7 @@ before_script:
 development:
   stage: deploy
   script:
-    - docker build -t "$CI_REGISTRY_IMAGE:latest" 4.3
+    - docker build -t "$CI_REGISTRY_IMAGE:latest" ${GRAFANA_VERSION}
     - docker push "$CI_REGISTRY_IMAGE:latest"
   only:
     - master
@@ -19,7 +20,7 @@ development:
 testing:
   stage: deploy
   script:
-    - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_REF_SLUG}" 4.3
+    - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_REF_SLUG}" ${GRAFANA_VERSION}
     - docker push "$CI_REGISTRY_IMAGE:${CI_COMMIT_REF_SLUG}"
   only:
     - branches
@@ -29,9 +30,9 @@ testing:
 stable:
   stage: deploy
   script:
-    - export VERSION=$(grep ' VERSION' 4.3/Dockerfile|awk -F" " '{ print $3 }')
+    - export VERSION=$(grep ' VERSION' ${GRAFANA_VERSION}/Dockerfile|awk -F" " '{ print $3 }')
     - echo ${VERSION}
-    - docker build -t "$CI_REGISTRY_IMAGE:v${VERSION}" 4.3
+    - docker build -t "$CI_REGISTRY_IMAGE:v${VERSION}" ${GRAFANA_VERSION}
     - docker push "$CI_REGISTRY_IMAGE:v${VERSION}"
   only:
     - tags
