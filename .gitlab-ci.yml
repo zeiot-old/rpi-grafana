@@ -4,7 +4,7 @@ services:
 
 variables:
   DOCKER_DRIVER: overlay
-  GRAFANA_VERSION: "4.5"
+  GRAFANA_VERSION: "4.6"
 
 before_script:
   - docker login -u gitlab-ci-token -p "$CI_BUILD_TOKEN" "$CI_REGISTRY"
