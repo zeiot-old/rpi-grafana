@@ -37,7 +37,7 @@ help:
 .PHONY: build
 build:
 	@echo -e "$(OK_COLOR)[$(APP)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):${VERSION} $(version)
+	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):v${VERSION} $(version)
 
 .PHONY: run
 run:
@@ -45,7 +45,7 @@ run:
 	$(DOCKER) run --rm=true -p 9090:3000 \
 		-v `pwd`/$(version):/etc/grafana \
 		-v `pwd`/data:/data \
-		$(NAMESPACE)/$(IMAGE):$(VERSION)
+		$(NAMESPACE)/$(IMAGE):v$(VERSION)
 
 .PHONY: login
 login:
@@ -54,4 +54,4 @@ login:
 .PHONY: publish
 publish:
 	@echo -e "$(OK_COLOR)[$(APP)] Publish $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	@$(DOCKER) push $(NAMESPACE)/$(IMAGE):$(VERSION)
+	@$(DOCKER) push $(NAMESPACE)/$(IMAGE):v$(VERSION)
