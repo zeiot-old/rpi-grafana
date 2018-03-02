@@ -1,6 +1,10 @@
 RPI Grafana ChangeLog
 =================================
 
+# Version 1.2.0 (03/02/2018)
+
+- Add: Grafana 5.0.0
+
 # Version 1.1.0 (27/11/2017)
 
 - Add Grafana 4.6.0
