@@ -1,6 +1,11 @@
 RPI Grafana ChangeLog
 =================================
 
+# Version 1.3.0 (26/05/2018)
+
+- Support for ARM and ARM64
+- Add Grafana 5.1.0
+
 # Version 1.2.0 (03/02/2018)
 
 - Add: Grafana 5.0.0
